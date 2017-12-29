@@ -4,6 +4,7 @@
 const router = require('koa-router')()
 const contoller = require('./controller')
 
+router.get('/test',contoller.test)
 router.get('/',contoller.getToken)
 
 module.exports = router
