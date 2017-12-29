@@ -1,0 +1,27 @@
+{
+  "name": "wechat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"nodemon ./server/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/limengke123/wechat.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/limengke123/wechat/issues"
+  },
+  "homepage": "https://github.com/limengke123/wechat#readme",
+  "dependencies": {
+    "koa": "^2.4.1",
+    "koa-router": "^7.3.0",
+    "nodemon": "^1.14.3",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2"
+  }
+}
