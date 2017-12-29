@@ -7,8 +7,9 @@ const {wechat} = require('../config')
 const fs = require('fs')
 const util = require('util')
 const {resolve} = require('path')
-const {uri, appId, appsecret} = wechat
-const TOKEN_PATH = resolve(__dirname,'../../','./token/token.txt')
+const {url, appId, appsecret} = wechat
+const {token_uri} = url
+const TOKEN_PATH = resolve(__dirname,'../../','./file/token.txt')
 /**
  * rp请求
  * */
@@ -28,7 +29,7 @@ const GET = async (uri,decodeType="utf8") => {
 }
 
 const genToken = async ()=> {
-    const url = `${uri}&appid=${appId}&secret=${appsecret}`
+    const url = `${token_uri}&appid=${appId}&secret=${appsecret}`
     try{
         return await GET(url)
     } catch(e){

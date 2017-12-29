@@ -2,7 +2,7 @@
  * Created by li on 2017/12/29 11:02.
  */
 const {genToken,writeFilePromise,readFilePromise} = require('../../utils')
-const TOKEN_PATH = './token/token.txt'
+const TOKEN_PATH = './file/token.txt'
 const getToken = async (ctx, next) => {
     try{
         const data = await genToken()
