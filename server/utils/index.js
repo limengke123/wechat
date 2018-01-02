@@ -82,5 +82,6 @@ module.exports = {
     genToken,
     writeFilePromise,
     getStat,
-    readFilePromise
+    readFilePromise,
+    checkToken:require('./checkToken')
 }
