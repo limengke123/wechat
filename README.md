@@ -25,3 +25,5 @@ npm install
 
 用openid去拿到用户详情
 
+测试下
+
