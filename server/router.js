@@ -4,6 +4,7 @@
 const Router = require('koa-router')()
 const allRouter = require('./route/index')
 module.exports = (app) => {
+    Router.get('/fk',(ctx) => {ctx.body = "fk"})
     Router.use('/list',allRouter.list.routes(),allRouter.list.allowedMethods())
     Router.use('/token',allRouter.token.routes(),allRouter.token.allowedMethods())
     Router.get('/*',(ctx) => {
