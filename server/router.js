@@ -8,6 +8,7 @@ module.exports = (app) => {
     Router.use('/list',allRouter.list.routes(),allRouter.list.allowedMethods())
     Router.use('/token',allRouter.token.routes(),allRouter.token.allowedMethods())
     Router.get('/*',(ctx) => {
+        console.log(ctx.url)
         ctx.body = 'sever is started' + ctx.url
     })
     app.use(Router.routes())
