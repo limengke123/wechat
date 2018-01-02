@@ -3,10 +3,9 @@
  */
 const Router = require('koa-router')()
 const allRouter = require('./route/index')
-const logger = async (ctx,next)=> {console.log(ctx.url);next()}
 module.exports = (app) => {
     Router.use('/checkWX',allRouter.checkWX.routes(),allRouter.checkWX.allowedMethods())
-    Router.use('/list',logger,allRouter.list.routes(),allRouter.list.allowedMethods())
+    Router.use('/list',allRouter.list.routes(),allRouter.list.allowedMethods())
     Router.use('/token',allRouter.token.routes(),allRouter.token.allowedMethods())
     Router.get('/*',(ctx) => {
         console.log(ctx.url)
