@@ -5,6 +5,7 @@ const {checkToken} = require('../../utils')
 const accessWX = async (ctx, next)=> {
     var url = ctx.url.split('?')[1]
     const data = checkToken(url)
+    console.log(data)
     ctx.body = data
 }
 
