@@ -11,7 +11,7 @@ const accessWX = async (ctx, next)=> {
 
 const getCode = async (ctx, next ) => {
     if(ctx.query){
-        ctx.body =ctx.query
+        ctx.body =ctx.query.code
     } else {
         ctx.body = "no data"
     }
