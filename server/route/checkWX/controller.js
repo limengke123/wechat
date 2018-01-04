@@ -3,12 +3,21 @@
  */
 const {checkToken} = require('../../utils')
 const accessWX = async (ctx, next)=> {
-    var url = ctx.url.split('?')[1]
+    let url = ctx.url.split('?')[1]
     const data = checkToken(url)
     console.log(data)
     ctx.body = data
 }
 
+const getCode = async (ctx, next ) => {
+    if(ctx.query){
+        ctx.body =ctx.query
+    } else {
+        ctx.body = "no data"
+    }
+}
+
 module.exports = {
-    accessWX
+    accessWX,
+    getCode
 }

@@ -5,6 +5,7 @@ const router = require('koa-router')()
 const controller = require('./controller')
 
 router.get('/',controller.accessWX)
+router.get('/info',controller.getCode)
 
 module.exports = router
 
